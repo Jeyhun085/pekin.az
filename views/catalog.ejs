@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Catalog</title>
+</head>
+
+<body>
+  <div class="row">
+    
+      <% w5Items.forEach(item=> { name = item.name, price = item.salePrices[0].value / 100 + " AZN", itemID = item.id,
+        article = item.article%>
+        <% if (item.stock> 0) { stock = "Anbarda var" }
+          else if (item.inTransit > 0) { stock = "Yolda var" }
+          else { stock = "Bitib" } %>
+          <div class="c30Items col-sm-6 col-md-4 col-lg-3"></div>
+          <div class="card" style="width: 18rem;">
+            <img src="images/2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+                <%= name %>
+              </h5>
+              <p class="card-text">KOD:<%= article %>
+              </p>
+              <p class="card-text">Qaliq:<%= stock %>
+              </p>
+              <p class="card-text">Qiymet:<%= price %>
+              </p>
+              <div class="input-group mb-3">
+                <input id="input_<%= article %>" type="text" class="form-control" placeholder="Miqdar"
+                  aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button id="<%= article %>" class="btn btn-outline-secondary" type="button"
+                    onClick="addItemToCart( document, this.id);">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <% }) %>
+    
+
+    
+      <% c30Items.forEach(item=> { name = item.name, price = item.salePrices[0].value / 100 + " AZN", itemID = item.id,
+        article = item.article%>
+        <% if (item.stock> 0) { stock = "Anbarda var" }
+          else if (item.inTransit > 0) { stock = "Yolda var" }
+          else { stock = "Bitib" } %>
+          <div class="w5Items col-sm-6 col-md-4 col-lg-3">
+          <div class="card" style="width: 18rem;">
+            <img src="images/2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">
+                <%= name %>
+              </h5>
+              <p class="card-text">KOD:<%= article %>
+              </p>
+              <p class="card-text">Qaliq:<%= stock %>
+              </p>
+              <p class="card-text">Qiymet:<%= price %>
+              </p>
+              <div class="input-group mb-3">
+                <input id="input_<%= article %>" type="text" class="form-control" placeholder="Miqdar"
+                  aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <button id="<%= article %>" class="btn btn-outline-secondary" type="button"
+                    onClick="addItemToCart( document, this.id);">Buy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <% }) %>
+    
+  </div>
+  <script src="functions.js"></script>
+
+</body>
+
+</html>

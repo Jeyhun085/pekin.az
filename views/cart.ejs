@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Catalog</title>
+</head>
+
+<body>
+    <div class="row">
+        
+            <% Items.forEach(item=> { name = item.json.name, price = item.json.salePrices[0].value / 100 + " AZN",
+                article = item.json.article, qty = item.cartQTY%>
+                <% if (item.json.stock> 0) { stock = "Anbarda var" }
+                    else if (item.inTransit > 0) { stock = "Yolda var" }
+                    else { stock = "Bitib" } %>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="card" style="width: 18rem;">
+                        <img src="images/2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= name %>
+                            </h5>
+                            <p class="card-text">KOD:<%= article %>
+                            </p>
+                            <p class="card-text">Qaliq:<%= stock %>
+                            </p>
+                            <p class="card-text">Say:<%= qty %>
+                            </p>
+                            <a href="#" class="btn btn-primary">
+                                <%= price %>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    <% }) %>
+        
+
+    </div>
+
+
+</body>
+
+</html>
