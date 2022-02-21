@@ -1,5 +1,5 @@
-// import pagination from "pagination";
 import jsdom from "jsdom";
+import queryString from "query-string";
 import express from 'express';
 import axios from 'axios';
 import { config } from '../token.js';
@@ -8,14 +8,15 @@ const modelsRouter = express.Router();
 
 modelsRouter.get('/:model', async (req, res) => {
     var model = req.params.model
-    if (req.query.section === undefined) {
+    if (req.query.section === undefined || req.query.section === "") {
         var sectionSearch = "";
     } else {
         var sectionSearch = ";" + sectionUrl + "=" + req.query.section
     }
 
-    console.log(model);
-    console.log(sectionSearch);
+    // console.log("Model is " + model);
+    
+    console.log( req.query);
 
 
     const loadSectionParts = async (model, sectionSearch) => {
@@ -30,10 +31,9 @@ modelsRouter.get('/:model', async (req, res) => {
     }
 
     const properMainItems = await loadSectionParts(model, sectionSearch);
+    // console.log("Items QTY:" + properMainItems.length);
 
-    
-    
-    res.render("models", { Items: properMainItems})
+    res.render("models", { Items: properMainItems, page: req.query.page, section: req.query.section })
 
 
 })

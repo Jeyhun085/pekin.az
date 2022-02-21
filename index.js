@@ -10,16 +10,16 @@ const __dirname = path.resolve(path.dirname(''));
 const app = express()
 
 app.use(cookieParser());
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
-app.use( express.static('public'))
-app.get('/', (req,res) =>{
+app.get('/',express.static('public'), (req,res) =>{
     res.sendFile(__dirname + "/index.html");
 })
 
 
-app.use('/item',itemRouter)
-app.use('/cart',cartRouter)
-app.use('/models',modelsRouter)
-app.use('/catalog',catalogRouter)
+app.use('/item',express.static('public'),itemRouter)
+app.use('/cart',express.static('public'),cartRouter)
+app.use('/models',express.static('public'),modelsRouter)
+app.use('/catalog',express.static('public'),catalogRouter)
 
 app.listen(3000);

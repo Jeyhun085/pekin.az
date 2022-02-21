@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <script>console.log("Query is: " + location.search)</script>
     <div>
         <a href="?">Butov mallar</a>
         <a href="?section=chassis">Asqi</a>
@@ -19,6 +20,8 @@
         <a href="?section=trim">Plasmas</a>
         <a href="?section=engine">Muherrik</a>
         <a href="?section=transmission">Transmissiya</a>
+        <a href="?page=2">Next page <%= page %></a>
+        <a href="?page=2">Current section is <%= section %></a>
     </div>
     <div class="row">
 

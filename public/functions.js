@@ -1,3 +1,5 @@
+// ************  Cookies to save Items in Cart *****************
+
 function addItemToCart(document, ID) {
     var inputID = "input_" + ID
     var inputValue = document.getElementById(inputID).value
@@ -18,3 +20,5 @@ function checkCookies() {
     
 
 }
+
+// ************  Updating Search Query *****************
