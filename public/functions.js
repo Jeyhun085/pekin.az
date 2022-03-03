@@ -20,5 +20,3 @@ function checkCookies() {
     
 
 }
-
-// ************  Updating Search Query *****************

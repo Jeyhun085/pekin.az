@@ -1,5 +1,3 @@
-import jsdom from "jsdom";
-import queryString from "query-string";
 import express from 'express';
 import axios from 'axios';
 import { config } from '../token.js';
@@ -14,11 +12,6 @@ modelsRouter.get('/:model', async (req, res) => {
         var sectionSearch = ";" + sectionUrl + "=" + req.query.section
     }
 
-    // console.log("Model is " + model);
-    
-    console.log( req.query);
-
-
     const loadSectionParts = async (model, sectionSearch) => {
         try {
             const response = await axios.get(mainUrl + "entity/assortment?filter=" + modificationsUrl + `~${model}` + sectionSearch, config)
@@ -30,10 +23,19 @@ modelsRouter.get('/:model', async (req, res) => {
 
     }
 
-    const properMainItems = await loadSectionParts(model, sectionSearch);
-    // console.log("Items QTY:" + properMainItems.length);
+    if (req.query.page === undefined) { var currentPage = 1 }
+    else { var currentPage = parseInt(req.query.page) }
+    console.log("Page is: " + currentPage);
 
-    res.render("models", { Items: properMainItems, page: req.query.page, section: req.query.section })
+
+    const properMainItems = await loadSectionParts(model, sectionSearch);
+    var qty = properMainItems.length;
+    console.log("All QTY is: " + qty);
+
+    var itemsForPage = properMainItems.slice((currentPage - 1) * 20, currentPage * 20)
+
+
+    res.render("models", { Items: itemsForPage, page: currentPage, section: req.query.section, qty: qty, totalPages: Math.ceil(qty / 20) })
 
 
 })
