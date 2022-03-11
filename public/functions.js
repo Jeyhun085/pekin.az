@@ -4,7 +4,6 @@ function addItemToCart(document, ID) {
     var inputID = "input_" + ID
     var inputValue = document.getElementById(inputID).value
     console.log(inputValue, ID);
-    // document.cookie = ID + "=" + inputValue + "; path=/;" + "; maxAge=10;"
     document.cookie = `${ID}=${inputValue};path=/;max-age=604800`
 }
 
@@ -16,9 +15,9 @@ function checkCookies() {
     }, {});
     for (const [item, qty] of Object.entries(allCookies)) {
         console.log(`${item}: ${qty}`);
-      }
-    
+    }
+
 
 }
 
-// ************  Updating Search Query *****************
+checkCookies();
