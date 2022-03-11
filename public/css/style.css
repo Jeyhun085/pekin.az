@@ -379,8 +379,7 @@ footer a {
     justify-content: center;
     display: flex;
   }
-}
-@media (max-width: 767px) {
+
   .sale {
     display: grid;
     grid-template-columns: 1fr;
