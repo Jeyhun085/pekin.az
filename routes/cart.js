@@ -2,7 +2,7 @@ import express from 'express';
 import axios from 'axios';
 import https from 'https';
 import mongoose from 'mongoose';
-import { config } from '../token.js';
+import { config,mongoURI } from '../token.js';
 import { mainUrl, modificationsUrl, hotPartUrl } from '../urls.js';
 const cartRouter = express.Router();
 
@@ -30,7 +30,7 @@ cartRouter.get("/", async (req, res) => {
 })
 
 cartRouter.post("/", async (req, res) => {
-  await mongoose.connect('mongodb+srv://Jeyhun:Cqu2425232@clusterpekin.ss65h.mongodb.net/CustomerOrders');
+  await mongoose.connect(mongoURI);
   const Schema = mongoose.Schema;
   const ObjectId = Schema.ObjectId;
 
