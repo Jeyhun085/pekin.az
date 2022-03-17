@@ -5,6 +5,8 @@ function addItemToCart(document, ID) {
     var inputValue = document.getElementById(inputID).value
     console.log(inputValue, ID);
     document.cookie = `${ID}=${inputValue};path=/;max-age=604800`
+    $('.toast').toast('show');
+    document.getElementById(inputID).value = ""
 }
 
 function checkCookies() {
@@ -21,3 +23,15 @@ function checkCookies() {
 }
 
 checkCookies();
+
+
+// ************  Toast Bootstrap *****************
+$(document).ready(function(){
+    console.log("Done");
+    $("p").css("color", "red");
+    $('.toast').toast();
+    
+  });
+
+
+
