@@ -1,40 +1,108 @@
 * {
-  font-family: "Rubik", sans-serif;
+  font-family: "montserrat", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 .logo {
+  margin-left: 30px;
   filter: brightness(0) invert(1);
 }
+
 .nav-item {
-  font-size: 1.2rem;
+  font-size: 1em;
   padding: 3%;
 }
+/*.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+}*/
+
+ul li a {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+ul li a.cart:hover {
+  text-decoration: none;
+  color: #e8e5e4;
+}
+
+ul li a.cart .cart-basket {
+  font-size: 0.6rem;
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  background-color: rgb(177, 14, 14);
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
 .abv {
   width: 100%;
 }
 .sale {
+  margin: 20px;
+  position: relative;
   justify-content: space-around;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 45% 55%;
   gap: 2rem;
   margin-top: 3rem;
   border: 1px solid rgb(216, 214, 214);
   border-radius: 12px;
-  margin: 50px;
   box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.253);
 }
 .ddd {
+  position: relative;
   text-align: center;
+}
+.car-photo {
+  margin-left: 50px;
+  top: -40%;
+  left: 73%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 99;
+}
+.car-models {
+  margin-bottom: 10px;
+  z-index: -1;
+  top: 10%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  width: 400px;
+  background-color: red;
+  position: absolute;
+  color: #fff;
+}
+.sale::after {
+  display: none;
+  left: -10px;
+  top: -10px;
+  position: absolute;
+  content: "15% ENDIRIM";
+  background-color: rgb(177, 14, 14);
+  color: #f1f1f1;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 9px;
 }
 .container1 {
   position: relative;
   color: rgb(255, 255, 255);
   background-image: linear-gradient(
-      hsla(0, 100%, 1%, 0.759),
-      hsla(60, 87%, 3%, 0.499)
+      hsla(0, 0%, 5%, 0.859),
+      hsla(60, 100%, 1%, 0.799)
     ),
     url(/images/im3.jpg);
 
@@ -45,17 +113,25 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-bottom: 10px solid rgb(177, 14, 14);
+}
+.container-fluid {
+  align-items: center;
+  margin-left: 20px;
+  width: 1250px;
 }
 
 .slogan {
-  font-size: 50px;
-  width: auto;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  font-size: 3em;
+  width: 1000px;
   display: block;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 .navbar-nav {
@@ -72,9 +148,11 @@
   width: 50%;
 }
 .first-reason {
+  font-size: 1rem;
+  height: 300px;
   column-gap: 4rem;
   padding: 20px;
-  background-color: rgba(244, 247, 247, 0.397);
+  background-color: rgb(244, 247, 247);
   width: 250px;
   display: grid;
   justify-content: center;
@@ -84,18 +162,49 @@
   box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.253);
 }
 .niye {
+  padding: 20px;
   color: rgb(61, 60, 59);
-  font-size: 2.6rem;
-  margin-bottom: 30px;
+  font-size: 2em;
+
   text-align: center;
 }
 .reason {
-  font-size: 16px;
+  width: 200px;
+  font-size: 1rem;
   margin: 10px;
   text-align: center;
 }
+.red {
+  text-align: center;
+  height: 250px;
+
+  border-bottom: 10px solid rgb(121, 13, 13);
+  color: rgb(121, 13, 13);
+}
+.s-cards {
+  margin: 20px;
+  padding: auto;
+  gap: 20px;
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.ccard {
+  padding: auto;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  width: 150px;
+  border: 1px solid rgba(171, 168, 168, 0.647);
+}
 
 .futures {
+  background-image: linear-gradient(
+      hsla(0, 0%, 5%, 0.159),
+      hsla(60, 24%, 93%, 0.799)
+    ),
+    url(/images/thomas-heintz-0tgMnMIYQ9Y-unsplash.jpg);
   margin-top: 20px;
   padding: 2rem;
   max-width: 120rem;
@@ -131,26 +240,30 @@
 .info-header {
   margin-top: 60px;
   color: rgb(61, 60, 59);
-  font-size: 2.6rem;
+  font-size: 2em;
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 .container2 {
+  margin-left: 50px;
   position: relative;
   width: 100%;
+}
+.info-desc {
+  width: 500px;
 }
 
 .image {
   opacity: 1;
   display: block;
-  width: 100%;
   height: auto;
   transition: 0.5s ease;
   backface-visibility: hidden;
 }
 
 .middle {
+  color: #fff;
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
@@ -168,11 +281,23 @@
 .container2:hover .middle {
   opacity: 1;
 }
-
+.container-for-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .text {
   text-decoration: none;
   border-radius: 20px;
-  background-color: #380672;
+  background-color: rgb(177, 14, 14);
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.text:hover {
+  text-decoration: none;
+  border-radius: 20px;
+  background-color: rgb(177, 14, 14);
   color: white;
   font-size: 16px;
   padding: 16px 32px;
@@ -180,26 +305,26 @@
 .fixed-bg {
   max-width: 100%;
   background-image: linear-gradient(
-      hsla(263, 72%, 17%, 0.859),
+      hsla(0, 52%, 12%, 0.859),
       hsla(60, 87%, 3%, 0.599)
     ),
     url(/images/pic1.jpg);
-  min-height: 500px;
+  min-height: 400px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .servis {
-  border-radius: 12px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
   width: 100%;
+  margin: auto;
+  gap: rem;
+  justify-content: space-around;
+  align-items: center;
 }
 .servis-headline {
-  font-size: 50px;
-  padding: 50px;
+  padding: 35px;
+  font-size: 2.25em;
   color: #fff;
   text-align: center;
 }
@@ -210,9 +335,27 @@
   color: #f1f1f1;
   font-size: 1.5rem;
 }
+h4 {
+  padding: 12px;
+  margin: 5px;
+}
 .flex-container {
-  display: flex;
-  flex-flow: row wrap;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 100px;
+}
+.text-container {
+  line-height: 1.6;
+  font-weight: 500;
+  width: 150px;
+}
+.price-for-main {
+  font-weight: bold !important;
+  text-transform: lowercase !important;
 }
 
 #cards_landscape_wrap-2 {
@@ -228,6 +371,7 @@
   outline: none;
 }
 #cards_landscape_wrap-2 .card-flyer {
+  width: 150px;
   border-radius: 5px;
 }
 #cards_landscape_wrap-2 .card-flyer .image-box {
@@ -271,11 +415,11 @@
 #cards_landscape_wrap-2 .card-flyer:hover {
   background: #fff;
   box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   margin-top: 10px;
 }
 #cards_landscape_wrap-2 .card-flyer .text-box p {
@@ -289,25 +433,28 @@
 #cards_landscape_wrap-2 .card-flyer .text-box h6 {
   margin-top: 0px;
   margin-bottom: 4px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  text-transform: uppercase;
-  font-family: "Roboto Black", sans-serif;
   letter-spacing: 1px;
-  color: #00acc1;
+  color: rgb(177, 14, 14);
+}
+.special {
+  color: rgb(177, 14, 14);
+  text-align: center;
 }
 footer {
+  margin-top: 50px;
   color: #fff;
-  background-color: #777;
+  background-color: rgb(50, 50, 50);
   width: 100%;
-  height: 20%;
+  height: 10%;
 }
 footer a {
   color: #fff;
   text-decoration: none;
 }
 .fot-head {
-  color: rgb(50, 22, 97);
+  color: rgb(177, 14, 14);
 }
 .list-inline-item {
   width: 30px;
@@ -342,7 +489,7 @@ footer a {
 /* ============ small devices ============ */
 @media (max-width: 991px) {
   .dropdown-menu .dropdown-menu {
-    margin-left: 0.7rem;
+    margin-left: 2.7rem;
     margin-right: 0.7rem;
     margin-bottom: 0.5rem;
   }
@@ -366,20 +513,22 @@ footer a {
   }
 
   .ser-xid {
-    line-height: 1.7;
+    line-height: 1.6;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     padding: auto;
     color: #f1f1f1;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .flex-container {
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
-
 
   .sale {
     display: grid;
@@ -391,5 +540,120 @@ footer a {
     margin-right: 5px;
     box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.253);
   }
-}
+  .navbar {
+    width: 100%;
+  }
+  .etc {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .arrow {
+    color: #fff;
+  }
 
+  .container-fluid {
+    gap: 20px;
+    margin-top: 0;
+  }
+  .ser-xid {
+    margin-bottom: 20px;
+  }
+  .servis-headline {
+    font-weight: 500;
+    padding: 15px;
+    font-size: 1.625em;
+
+    color: #fff;
+    text-align: center;
+  }
+  .logo {
+    margin-left: 10px;
+    filter: brightness(0) invert(1);
+  }
+  .slogan {
+    font-size: 1.625em;
+    width: 400px;
+  }
+  .info-desc {
+    width: auto;
+  }
+  .container2 {
+    margin-left: 0px;
+  }
+  .text {
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: rgb(133, 27, 27);
+    color: white;
+    font-size: 12px;
+    padding: 12px 24px;
+  }
+  .info-header {
+    margin-top: 0%;
+  }
+  .special {
+    margin-top: 20px;
+  }
+  .ddd {
+    margin-top: 50px;
+  }
+
+  .sale::after {
+    left: -10px;
+    top: -10px;
+    position: absolute;
+    content: "15% ENDIRIM";
+    background-color: rgb(133, 27, 27);
+    color: #f1f1f1;
+    font-size: 12px;
+    padding: 10px 20px;
+    border-radius: 9px;
+  }
+  .sale {
+    margin: 20px;
+  }
+  #cards_landscape_wrap-2 .card-flyer {
+    width: 150px;
+    border-radius: 5px;
+  }
+
+  .text-box {
+    width: 100%;
+  }
+  .row {
+    align-items: center;
+
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .car-photo {
+    margin-left: 5px;
+    width: 40%;
+    z-index: 99;
+  }
+  .cs35 {
+    width: 52%;
+  }
+
+  .car-models {
+    margin-left: 0;
+    margin-bottom: 10px;
+    z-index: -1;
+    text-align: left;
+    width: 400px;
+    background: none;
+    color: rgb(0, 0, 0);
+  }
+  .main-nav {
+    align-items: center;
+  }
+  .card-flyer {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  hr {
+    display: none;
+  }
+}
