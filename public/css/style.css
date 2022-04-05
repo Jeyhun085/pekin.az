@@ -13,13 +13,9 @@
   font-size: 1em;
   padding: 3%;
 }
-/*.navbar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 10vh;
-}*/
+.navbar-nav{
+  width: 60%;
+}
 
 ul li a {
   line-height: 1.6;
@@ -35,7 +31,7 @@ ul li a.cart:hover {
 ul li a.cart .cart-basket {
   font-size: 0.6rem;
   position: absolute;
-  top: -6px;
+  top: 5px;
   right: -5px;
   width: 15px;
   height: 15px;
@@ -47,6 +43,9 @@ ul li a.cart .cart-basket {
 
 .abv {
   width: 100%;
+}
+h2{
+  margin-top: 50px;
 }
 .sale {
   margin: 20px;
@@ -81,22 +80,11 @@ ul li a.cart .cart-basket {
   transform: translate(-50%, -50%);
   text-align: left;
   width: 400px;
-  background-color: red;
+  background-color: rgb(188, 3, 3);
   position: absolute;
   color: #fff;
 }
-.sale::after {
-  display: none;
-  left: -10px;
-  top: -10px;
-  position: absolute;
-  content: "15% ENDIRIM";
-  background-color: rgb(177, 14, 14);
-  color: #f1f1f1;
-  font-size: 20px;
-  padding: 10px 20px;
-  border-radius: 9px;
-}
+
 .container1 {
   position: relative;
   color: rgb(255, 255, 255);
@@ -106,19 +94,23 @@ ul li a.cart .cart-basket {
     ),
     url(/images/im3.jpg);
 
-  /* Full height */
+ 
   height: 50vh;
 
-  /* Center and scale the image nicely */
+  
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom: 10px solid rgb(177, 14, 14);
+  border-bottom: 4px solid rgb(177, 14, 14);
+  margin-bottom: 50px;
 }
 .container-fluid {
   align-items: center;
   margin-left: 20px;
-  width: 1250px;
+  width: 100%;
+}
+.fas{ margin-top: 10px;
+
 }
 
 .slogan {
@@ -174,13 +166,7 @@ ul li a.cart .cart-basket {
   margin: 10px;
   text-align: center;
 }
-.red {
-  text-align: center;
-  height: 250px;
 
-  border-bottom: 10px solid rgb(121, 13, 13);
-  color: rgb(121, 13, 13);
-}
 .s-cards {
   margin: 20px;
   padding: auto;
@@ -207,7 +193,7 @@ ul li a.cart .cart-basket {
     url(/images/thomas-heintz-0tgMnMIYQ9Y-unsplash.jpg);
   margin-top: 20px;
   padding: 2rem;
-  max-width: 120rem;
+  max-width: 100%;
 }
 .container-for-futures {
   width: auto;
@@ -226,7 +212,7 @@ ul li a.cart .cart-basket {
   display: inline-block;
 }
 .reason-desc {
-  color: #504e4e;
+  color: #353434;
 }
 .about {
   padding: 50px;
@@ -236,6 +222,7 @@ ul li a.cart .cart-basket {
   align-items: center;
   display: flex;
 }
+
 
 .info-header {
   margin-top: 60px;
@@ -248,9 +235,9 @@ ul li a.cart .cart-basket {
 .container2 {
   margin-left: 50px;
   position: relative;
-  width: 100%;
+  width: 50%;
 }
-.info-desc {
+.info-desc { font-size: 1.5em;
   width: 500px;
 }
 
@@ -281,10 +268,18 @@ ul li a.cart .cart-basket {
 .container2:hover .middle {
   opacity: 1;
 }
-.container-for-about {
+.container-for-about { padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.coming-soon{ display: block;
+  position: absolute;top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.6em;
 }
 .text {
   text-decoration: none;
@@ -324,7 +319,7 @@ ul li a.cart .cart-basket {
 }
 .servis-headline {
   padding: 35px;
-  font-size: 2.25em;
+  font-size:3em;
   color: #fff;
   text-align: center;
 }
@@ -339,6 +334,19 @@ h4 {
   padding: 12px;
   margin: 5px;
 }
+.cs35 {
+  width: 400px;
+}
+
+.fa-phone{  margin: 7px;
+  color: #e8e5e4;
+  
+
+}
+.number{ font-size: 20px;
+
+}
+
 .flex-container {
   width: 100%;
   margin-left: 0;
@@ -370,11 +378,11 @@ h4 {
   text-decoration: none;
   outline: none;
 }
-#cards_landscape_wrap-2 .card-flyer {
-  width: 150px;
+#cards_landscape_wrap-2 .card-flyer { height: 280px; 
+  width: 200px;
   border-radius: 5px;
 }
-#cards_landscape_wrap-2 .card-flyer .image-box {
+#cards_landscape_wrap-2 .card-flyer .image-box {  height: 160px;
   background: #ffffff;
   overflow: hidden;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
@@ -385,7 +393,7 @@ h4 {
   -moz-transition: all 0.9s ease;
   -o-transition: all 0.9s ease;
   -ms-transition: all 0.9s ease;
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 #cards_landscape_wrap-2 .card-flyer:hover .image-box img {
@@ -396,11 +404,11 @@ h4 {
   -o-transform: scale(1.15);
   transform: scale(1.15);
 }
-#cards_landscape_wrap-2 .card-flyer .text-box {
-  text-align: center;
+#cards_landscape_wrap-2 .card-flyer .text-box { 
+  text-align: center; justify-content: center;
 }
-#cards_landscape_wrap-2 .card-flyer .text-box .text-container {
-  padding: 20px 18px;
+#cards_landscape_wrap-2 .card-flyer .text-box .text-container { text-align: left;
+  padding: 20px 10px;
 }
 #cards_landscape_wrap-2 .card-flyer {
   background: #ffffff;
@@ -422,25 +430,31 @@ h4 {
   transition: all 0.2s ease-in-out;
   margin-top: 10px;
 }
-#cards_landscape_wrap-2 .card-flyer .text-box p {
+#cards_landscape_wrap-2 .card-flyer .text-box p { width: 200px; margin-left: 0;
   margin-top: 10px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   padding-bottom: 0px;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 1px;
   color: #000000;
 }
 #cards_landscape_wrap-2 .card-flyer .text-box h6 {
   margin-top: 0px;
   margin-bottom: 4px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;
   color: rgb(177, 14, 14);
 }
-.special {
-  color: rgb(177, 14, 14);
-  text-align: center;
+
+.big{
+  height: 50%;
+  width: auto;
+}
+
+.special { background-color: rgb(177, 14, 14);
+  color: rgb(255, 255, 255);
+  text-align: center; padding: 10px;
 }
 footer {
   margin-top: 50px;
@@ -453,15 +467,24 @@ footer a {
   color: #fff;
   text-decoration: none;
 }
-.fot-head {
-  color: rgb(177, 14, 14);
+.fot-head { width: 250px; 
+  color: rgb(12, 210, 220);
 }
 .list-inline-item {
   width: 30px;
   height: auto;
 }
-/* ============ desktop view ============ */
-@media all and (min-width: 992px) {
+.contact{text-align: left;
+  margin-left: 50px;
+}
+.telefon{ margin-right: 5px;
+  width: 17px;
+  filter: brightness(0) invert(1);
+
+}  
+.whatsupp{ margin-right: 5px;
+
+}
   .dropdown-menu li {
     display: block;
     position: relative;
@@ -483,13 +506,12 @@ footer a {
   .dropdown-menu > li:hover > .submenu {
     display: block;
   }
-}
-/* ============ desktop view .end// ============ */
+  
 
 /* ============ small devices ============ */
-@media (max-width: 991px) {
+@media (max-width: 990px) {
   .dropdown-menu .dropdown-menu {
-    margin-left: 2.7rem;
+    margin-left: -4.7rem;
     margin-right: 0.7rem;
     margin-bottom: 0.5rem;
   }
@@ -530,15 +552,15 @@ footer a {
     margin-bottom: 20px;
   }
 
-  .sale {
+  .sale { box-shadow: none;
     display: grid;
     grid-template-columns: 1fr;
-    border: 1px solid rgb(216, 214, 214);
-    border-radius: 12px;
+ width: 90%;
+  border: none;
     margin-top: 25px;
     margin-left: 5px;
     margin-right: 5px;
-    box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.253);
+   
   }
   .navbar {
     width: 100%;
@@ -549,6 +571,26 @@ footer a {
   }
   .arrow {
     color: #fff;
+  }
+  .navbar-nav{
+    width: 90%;
+  }
+ 
+  #cards_landscape_wrap-2 .card-flyer .text-box p { width: 100%; margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #000000;
+  }
+  #cards_landscape_wrap-2 .card-flyer .text-box h6 {
+    margin-top: 0px;
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgb(177, 14, 14);
   }
 
   .container-fluid {
@@ -561,7 +603,7 @@ footer a {
   .servis-headline {
     font-weight: 500;
     padding: 15px;
-    font-size: 1.625em;
+    font-size:2em;
 
     color: #fff;
     text-align: center;
@@ -570,11 +612,14 @@ footer a {
     margin-left: 10px;
     filter: brightness(0) invert(1);
   }
-  .slogan {
+  .slogan { position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 1.625em;
     width: 400px;
   }
-  .info-desc {
+  .info-desc { font-size: 1.2em;
     width: auto;
   }
   .container2 {
@@ -588,38 +633,37 @@ footer a {
     font-size: 12px;
     padding: 12px 24px;
   }
-  .info-header {
+  .info-header { font-size: 1.6rem; width: 100%;
     margin-top: 0%;
   }
   .special {
     margin-top: 20px;
   }
-  .ddd {
+  .ddd { 
     margin-top: 50px;
   }
-
-  .sale::after {
-    left: -10px;
-    top: -10px;
-    position: absolute;
-    content: "15% ENDIRIM";
-    background-color: rgb(133, 27, 27);
-    color: #f1f1f1;
-    font-size: 12px;
-    padding: 10px 20px;
-    border-radius: 9px;
+  .abv{
+    width: 80%;
   }
+  h4{margin-left: 30px;}
   .sale {
     margin: 20px;
   }
-  #cards_landscape_wrap-2 .card-flyer {
+  #cards_landscape_wrap-2 .card-flyer { text-align: center; height: 220px;
     width: 150px;
-    border-radius: 5px;
+    border-radius: 5px;   margin-left: 20px;
+    margin-bottom: 20px;
   }
 
-  .text-box {
-    width: 100%;
+  .coming-soon{ display: block;
+    position: absolute;top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1em;
   }
+  
   .row {
     align-items: center;
 
@@ -629,12 +673,15 @@ footer a {
     grid-template-rows: 1fr;
   }
   .car-photo {
-    margin-left: 5px;
-    width: 40%;
+    margin-left: 15px;
+    width: 30%;
     z-index: 99;
   }
   .cs35 {
-    width: 52%;
+    width: 40%;
+  }
+  .image-box{
+    max-height: 120px;
   }
 
   .car-models {
@@ -649,11 +696,59 @@ footer a {
   .main-nav {
     align-items: center;
   }
-  .card-flyer {
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
+
   hr {
     display: none;
   }
+ .between-sale{ display: block;
+  border: 1px solid red;
+ }
+  .container2 {
+   
+    position: relative;
+    width: 100%;
+    
+}
+.container1{
+  background-image: linear-gradient(
+    hsla(0, 0%, 5%, 0.859),
+    hsla(60, 100%, 1%, 0.899)
+  ),
+  url(/images/im3.jpg);
+
+
+height: 50vh;
+}
+.contact{text-align: left;
+width: 300px;
+}
+
+.maps{ height: 130px;
+  width: 170px; 
+  margin-left: 0;
+}
+.unvan{ width: 300px;
+
+}
+/* ============ Loader ============ */
+#loader {
+  animation: rotate linear 1s infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#preloader {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: white;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
 }

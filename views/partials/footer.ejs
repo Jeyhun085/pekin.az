@@ -1,0 +1,157 @@
+<!-- Footer -->
+<footer id="footer" class="page-footer font-small mdb-color pt-4">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-center">
+
+    <!-- Footer links -->
+    <div class="row text-center text-md-left mt-3 pb-3">
+
+      <!-- Elaqe melumati -->
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 contact">
+        <h5 class=" mb-4 font-weight-bold fot-head">Bizimlə əlaqə saxlayın</h5>
+        <p class="unvan">
+          <i class="fas fa-home mr-3 whatsupp"></i>Xırdalan dairəsi, 1-ci Mədən küç.
+        </p>
+        <p > <img class="telefon" src="/images/phone-call.png" alt="">
+           <a href="tel:+994775120000">077-512-00-00</a> 
+        </p>
+        <p > <img class="whatsupp" src="/images/whatsapp.png" width="20px" alt="">
+          <a href="https://wa.me/+994775120000">077-512-00-00</a> 
+        </p>
+        <p> <img class="telefon" src="/images/old-typical-phone.png" alt="">
+           <a href="tel:+994123419185">012-341-91-85</a>
+        </p>
+      </div>
+
+      <hr class="w-100 clearfix d-md-none">
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+        <iframe class="maps"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12145.762431304993!2d49.7727848!3d40.443384!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x695ff83a840eb6f2!2sPekin%20avto%20ehtiyat%20hisseleri!5e0!3m2!1sen!2s!4v1647518175490!5m2!1sen!2s"
+          width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+    </div>
+    <!-- Footer links -->
+
+    <hr>
+
+    <div class="row d-flex align-items-center">
+
+      <div class="col-md-7 col-lg-8">
+
+        <!--Copyright-->
+        <p class="text-center text-md-left">© 2022 Copyright:
+          <a href="#">
+            <strong> Pekin Avto</strong>
+          </a>
+        </p>
+
+      </div>
+      <div class="col-md-5 col-lg-4 ml-lg-0">
+
+        <!-- Social buttons -->
+        <div class="text-center text-md-right">
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item">
+              <a class="btn-floating btn-lg rgba-white-slight mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            
+            <li class="list-inline-item">
+              <a class="btn-floating btn-lg rgba-white-slight mx-1">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-lg rgba-white-slight mx-1">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+    <!-- Dropdown menu Script -->
+
+    
+  <script type="text/javascript">
+    //	window.addEventListener("resize", function() {
+    //		"use strict"; window.location.reload();
+    //	});
+
+    document.addEventListener("DOMContentLoaded", function () {
+      /////// Prevent closing from click inside dropdown
+      document.querySelectorAll(".dropdown-menu").forEach(function (element) {
+        element.addEventListener("click", function (e) {
+          e.stopPropagation();
+        });
+      });
+
+      // make it as accordion for smaller screens
+      if (window.innerWidth < 992) {
+        // close all inner dropdowns when parent is closed
+        document
+          .querySelectorAll(".navbar .dropdown")
+          .forEach(function (everydropdown) {
+            everydropdown.addEventListener("hidden.bs.dropdown", function () {
+              // after dropdown is hidden, then find all submenus
+              this.querySelectorAll(".submenu").forEach(function (
+                everysubmenu
+              ) {
+                // hide every submenu as well
+                everysubmenu.style.display = "none";
+              });
+            });
+          });
+
+        document
+          .querySelectorAll(".dropdown-menu a")
+          .forEach(function (element) {
+            element.addEventListener("click", function (e) {
+              let nextEl = this.nextElementSibling;
+              if (nextEl && nextEl.classList.contains("submenu")) {
+                // prevent opening link if link needs to open dropdown
+                e.preventDefault();
+                console.log(nextEl);
+                if (nextEl.style.display == "block") {
+                  nextEl.style.display = "none";
+                } else {
+                  nextEl.style.display = "block";
+                }
+              }
+            });
+          });
+      }
+      // end if innerWidth
+    });
+  </script>
+  <script>
+    let items = document.querySelectorAll(".carousel .carousel-item");
+    items.forEach((el) => {
+      const minPerSlide = 4;
+      let next = el.nextElementSibling;
+      for (var i = 1; i < minPerSlide; i++) {
+        if (!next) {
+          // wrap carousel by using first child
+          next = items[0];
+        }
+        let cloneChild = next.cloneNode(true);
+        el.appendChild(cloneChild.children[0]);
+        next = next.nextElementSibling;
+      }
+    });
+  </script>
+</body>
+</html>
