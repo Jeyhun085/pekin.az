@@ -9,6 +9,7 @@ import itemRouter from './routes/item.js';
 const __dirname = path.resolve(path.dirname(''));
 const app = express()
 
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
